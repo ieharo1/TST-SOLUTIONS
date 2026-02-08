@@ -1,3 +1,75 @@
+/* Animación TST */
+.hero-title-row {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+/* Logo centrado */
+.hero-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor del texto */
+.hero-title {
+    position: relative;
+    display: grid;
+    place-items: center; /* CENTRO X + Y */
+    min-height: 260px;
+    text-align: left;
+}
+
+/* Ambos textos en la misma celda */
+.tst-initials,
+.tst-full {
+    grid-area: 1 / 1;
+}
+
+/* === TST INTRO === */
+.tst-initials {
+    font-size: 5.5rem;
+    letter-spacing: 0.25em;
+    line-height: 1;
+    transform-origin: center;
+    animation: tstIntroCentered 1.4s ease forwards;
+}
+
+/* === TEXTO FINAL === */
+.tst-full {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+    animation: tstRevealCentered 1s ease forwards;
+    animation-delay: 1.4s;
+}
+
+/* ===== ANIMACIONES CENTRADAS ===== */
+@keyframes tstIntroCentered {
+    0% {
+        opacity: 0;
+        transform: scale(1.4);
+        filter: blur(10px);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+}
+
+@keyframes tstRevealCentered {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
 /* Animación de entrada de elementos */
 .animate-on-scroll {
     opacity: 0;

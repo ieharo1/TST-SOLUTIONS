@@ -1,4 +1,3 @@
-/* style.css - Archivo principal CORREGIDO */
 
 /* ===== RESET Y VARIABLES ===== */
 * {
@@ -59,6 +58,34 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.hero-logo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: logoPulse 3s infinite ease-in-out;
+}
+
+.hero-logo::before {
+    content: "";
+    position: absolute;
+    inset: -12px;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            rgba(63, 174, 154, 0.6),
+            transparent 70%);
+    filter: blur(15px);
+    opacity: 0.8;
+}
+
+.hero-logo img {
+    width: 70%;
+    z-index: 2;
 }
 
 .logo-container {
@@ -630,19 +657,43 @@ section {
 }
 
 .service-features li {
-    padding: 0.6rem 0;
-    padding-left: 1.8rem;
+    padding: 0.8rem 1rem;
+    padding-left: 3rem;
     position: relative;
-    color: rgba(255, 255, 255, 0.85);
+    color: white;
+    /* Cambiado a blanco puro */
     font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(63, 174, 154, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform-origin: left center;
+}
+
+.service-features li:hover {
+    background: rgba(63, 174, 154, 0.15);
+    transform: translateX(10px) scale(1.02);
+    border-color: var(--tst-green-light);
+    box-shadow: 0 5px 15px rgba(31, 111, 99, 0.2);
+    color: var(--tst-white);
+    /* Asegura que siga blanco */
 }
 
 .service-features li::before {
     content: '✓';
     position: absolute;
-    left: 0;
+    left: 1rem;
     color: var(--tst-green-light);
     font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.service-features li:hover::before {
+    transform: scale(1.3);
+    color: var(--tst-white);
 }
 
 /* ===== WHY TST SECTION ===== */
@@ -836,17 +887,31 @@ section {
 .proyecto-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.8rem;
     margin-top: 1.5rem;
 }
 
 .tech-tag {
-    background: rgba(63, 174, 154, 0.2);
-    color: var(--tst-green-light);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    background: rgba(63, 174, 154, 0.25);
+    color: white;
+    /* Cambiado a blanco */
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
     font-size: 0.85rem;
     font-weight: 500;
+    border: 1px solid rgba(63, 174, 154, 0.3);
+    cursor: default;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: inline-block;
+    transform-origin: center;
+}
+
+.tech-tag:hover {
+    background: rgba(63, 174, 154, 0.4);
+    transform: scale(1.15) translateY(-3px);
+    box-shadow: 0 8px 20px rgba(31, 111, 99, 0.3);
+    border-color: var(--tst-green-light);
+    color: white;
 }
 
 /* ===== CONTACTO SECTION ===== */
@@ -872,17 +937,48 @@ section {
     border-radius: 24px;
     text-align: center;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 1px solid var(--card-border);
     backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transform-origin: center;
+    will-change: transform;
 }
 
+/* Efecto de fondo brillante al hover */
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-primary);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+}
+
+/* Efecto principal de agrandamiento */
 .contact-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    transform: scale(1.08) translateY(-10px);
+    box-shadow: 0 25px 60px rgba(31, 111, 99, 0.5);
     border-color: var(--tst-green-light);
 }
 
+.contact-card:hover::before {
+    opacity: 0.1;
+}
+
+/* Animación del icono */
+.contact-card:hover .contact-icon {
+    transform: scale(1.15);
+    background: var(--gradient-secondary);
+}
+
+/* Estilos del icono */
 .contact-icon {
     width: 80px;
     height: 80px;
@@ -892,23 +988,42 @@ section {
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-origin: center;
 }
 
 .contact-icon i {
     font-size: 2.5rem;
     color: white;
+    transition: all 0.3s ease;
 }
 
+.contact-card:hover .contact-icon i {
+    transform: scale(1.1);
+}
+
+/* Texto de la tarjeta */
 .contact-card h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
     color: var(--tst-white);
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover h3 {
+    color: var(--tst-white);
+    transform: translateY(-2px);
 }
 
 .contact-card p {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.7);
     margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover p {
+    color: var(--tst-white);
 }
 
 .contact-link {
@@ -917,10 +1032,12 @@ section {
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
-.contact-link:hover {
+.contact-card:hover .contact-link {
     color: var(--tst-white);
+    transform: translateY(-2px);
 }
 
 /* Formulario de Contacto */
