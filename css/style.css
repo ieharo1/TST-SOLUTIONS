@@ -925,7 +925,8 @@
 
         .timeline-item {
             position: relative;
-            width: 50%;
+            width: calc(50% - 40px);
+            /* deja espacio para la línea */
             padding: 0 4rem;
             margin-bottom: 4rem;
         }
@@ -935,7 +936,7 @@
         }
 
         .timeline-item:nth-child(even) {
-            left: 50%;
+            left: calc(50% + 40px);
         }
 
         .timeline-content {
@@ -954,7 +955,7 @@
 
         .timeline-year {
             position: absolute;
-            top: -25px;
+            top: -40px;
             font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
