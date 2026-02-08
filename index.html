@@ -909,6 +909,265 @@
             transition: width 0.1s ease;
         }
 
+        /* New Sections Styles */
+        
+        /* Timeline Section */
+        .timeline-section {
+            background: var(--tst-dark);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 0 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            background: rgba(14, 46, 42, 0.6);
+            padding: 2.5rem;
+            border-radius: 24px;
+            border: 1px solid rgba(63, 174, 154, 0.2);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            border-color: var(--tst-green-light);
+        }
+
+        .timeline-year {
+            position: absolute;
+            top: -25px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--tst-green-light);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-year {
+            right: -60px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-year {
+            left: -60px;
+        }
+
+        .timeline-content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--tst-white);
+        }
+
+        .timeline-content ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .timeline-content li {
+            padding: 0.3rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .timeline-content li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--tst-green-light);
+        }
+
+        /* Clients Section */
+        .clients-section {
+            background: var(--tst-green);
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .client-logo {
+            background: rgba(14, 46, 42, 0.6);
+            padding: 2rem;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            border: 1px solid rgba(63, 174, 154, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .client-logo:hover {
+            transform: translateY(-5px);
+            border-color: var(--tst-green-light);
+            background: rgba(14, 46, 42, 0.8);
+        }
+
+        .client-logo span {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            color: var(--tst-white);
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Proyectos Section */
+        .proyectos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .proyecto-card {
+            background: rgba(14, 46, 42, 0.6);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(63, 174, 154, 0.2);
+        }
+
+        .proyecto-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+            border-color: var(--tst-green-light);
+        }
+
+        .proyecto-header {
+            padding: 2rem;
+            background: rgba(31, 111, 99, 0.2);
+            text-align: center;
+            border-bottom: 2px solid var(--tst-green-light);
+        }
+
+        .proyecto-header h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            color: var(--tst-white);
+        }
+
+        .proyecto-body {
+            padding: 2rem;
+        }
+
+        .proyecto-body p {
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .proyecto-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .tech-tag {
+            background: rgba(63, 174, 154, 0.2);
+            color: var(--tst-green-light);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Form Styles */
+        .contact-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(14, 46, 42, 0.6);
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(63, 174, 154, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(63, 174, 154, 0.3);
+            border-radius: 12px;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--tst-green-light);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .form-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(31, 111, 99, 0.4);
+        }
+
         /* Responsive */
         @media (max-width: 992px) {
             .hero-content {
@@ -945,6 +1204,22 @@
             .cta-buttons {
                 justify-content: center;
             }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 80px;
+                padding-right: 2rem;
+            }
+
+            .timeline-year {
+                left: 0 !important;
+                right: auto !important;
+            }
         }
 
         @media (max-width: 768px) {
@@ -962,7 +1237,9 @@
 
             .services-grid,
             .features-grid,
-            .contact-grid {
+            .contact-grid,
+            .proyectos-grid,
+            .clients-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -987,6 +1264,10 @@
 
             nav {
                 padding: 1.2rem 2rem;
+            }
+
+            .contact-form-container {
+                padding: 2rem;
             }
         }
 
@@ -1015,6 +1296,11 @@
             .btn {
                 width: 100%;
                 justify-content: center;
+            }
+
+            .timeline-item {
+                padding-left: 60px;
+                padding-right: 1rem;
             }
         }
 
@@ -1070,13 +1356,15 @@
                 <img src="tst-logo.jpg" alt="TST Logo">
                 <div class="brand-text">
                     <h1>TST</h1>
-                    <p>TE SOLUCIONO TODO</p>
+                    <p>TE SOLUCIONAMOS TODO</p>
                 </div>
             </div>
             <ul class="nav-links">
                 <li><a href="#inicio" class="active">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#proposito">Propósito</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#clientes">Clientes</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
             <a href="#contacto" class="nav-cta">Cotizar Proyecto</a>
@@ -1091,21 +1379,23 @@
         <ul class="mobile-nav-links">
             <li><a href="#inicio" class="active">Inicio</a></li>
             <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#nosotros">¿Por qué TST?</a></li>
+            <li><a href="#proposito">Propósito</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#clientes">Clientes</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </div>
 
     <!-- Floating Contact Buttons -->
     <div class="floating-contacts">
-        <a href="https://wa.me/593988055517?text=Hola%20TST,%20quiero%20información%20sobre%20sus%20servicios"
+        <a href="https://wa.me/593997962747?text=Hola%20TST,%20quiero%20información%20sobre%20sus%20servicios"
             target="_blank" class="float-btn float-whatsapp" title="WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <a href="https://t.me/tu_usuario_telegram" target="_blank" class="float-btn float-telegram" title="Telegram">
+        <a href="https://t.me/tstsolutions" target="_blank" class="float-btn float-telegram" title="Telegram">
             <i class="fab fa-telegram-plane"></i>
         </a>
-        <a href="/cdn-cgi/l/email-protection#4f2c20213b2e2c3b200f3b3c3b612c2022703c3a2d252a2c3b720c20213c3a233b2e6a7d7f2b2a6a7d7f1c2a3d39262c26203c" class="float-btn float-email" title="Email">
+        <a href="mailto:negocios@tstsolutions.com.ec" class="float-btn float-email" title="Email">
             <i class="fas fa-envelope"></i>
         </a>
     </div>
@@ -1116,17 +1406,16 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="fade-in stagger-1">
-                    <span class="gradient-text">Soluciones Tecnológicas</span><br>
-                    que realmente funcionan
+                    <span class="gradient-text">TE SOLUCIONAMOS</span><br>
+                    TODO
                 </h1>
                 <p class="subtitle fade-in stagger-2">
-                    En TST desarrollamos páginas web, sistemas empresariales, ERPs, automatización, marketing digital y
-                    soporte tecnológico para que tu negocio crezca sin complicaciones.
+                    DEMOS EL GRAN SALTO A LA TRANSFORMACIÓN DIGITAL
                 </p>
 
                 <div class="hero-stats fade-in stagger-3">
                     <div class="stat-item">
-                        <span class="stat-number">5+</span>
+                        <span class="stat-number">12+</span>
                         <span class="stat-label">Años de Experiencia</span>
                     </div>
                     <div class="stat-item">
@@ -1158,7 +1447,7 @@
                 <div class="floating-badge badge-1">
                     <i class="fas fa-shield-check"></i>
                     <strong>Confiable</strong>
-                    <p>Soporte 24/7</p>
+                    <p>Más de 12 años</p>
                 </div>
                 <div class="floating-badge badge-2">
                     <i class="fas fa-rocket"></i>
@@ -1174,6 +1463,33 @@
         </div>
     </section>
 
+    <!-- Propósito Section -->
+    <section id="proposito" class="why-tst">
+        <div class="section-header">
+            <span class="section-label">NUESTRO PROPÓSITO</span>
+            <h2>TST Solutions <span class="gradient-text">"Te Solucionamos Todo"</span></h2>
+            <p>Demos el gran salto a la Transformación Digital</p>
+        </div>
+
+        <div class="contact-form-container fade-in">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Conexión Digital y Física</h3>
+                <p>En los últimos años, las empresas han tenido que transformar su modelo de gestión. Desde incorporar un sistema de delivery para entregar productos a sus consumidores, hasta abrir una tienda virtual para tener presencia online y como alternativa emergente para continuar haciendo negocio. Esto, por un lado, hace más fácil la vida al consumidor, pero por otro demanda más trabajo para el propietario de un negocio.</p>
+                
+                <p>En nuestra opinión es indispensable contar con ambos modelos físicos y digitales. Y gracias a este entendimiento hemos podido apoyar a cientos de empresas a adaptarse, ahora que las reglas del juego han cambiado.</p>
+                
+                <h4 style="margin-top: 2rem; color: var(--tst-green-light);">Experiencia Integral</h4>
+                <p>Crear tus activos digitales como tu página web o redes sociales es definitivamente el primer paso hacia el éxito. Lo primero es tener una presencia online, pero hay que tener en cuenta que no se trata solo de tenerlos, se trata de mantener estos medios activos y dinámicos disponibles para el consumidor 24x7. Es ahí en donde nos convertimos en su apoyo al generar una imagen de marca coherente, relevante y que capte la atención de sus potenciales clientes.</p>
+                
+                <h4 style="margin-top: 2rem; color: var(--tst-green-light);">Aliado o Socio de Crecimiento</h4>
+                <p>Entendemos cómo funcionan los negocios. Hemos sido clientes y podemos observar los nuevos retos de hoy. Como conclusión podemos decir que los negocios necesitan empuje, de apoyo de "socios de crecimiento". Nuestro propósito es generar valor y brindarte una solución eficiente para superar desafíos.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section id="servicios">
         <div class="section-header">
@@ -1183,159 +1499,249 @@
         </div>
 
         <div class="services-grid">
+            <!-- Telecomunicaciones -->
             <div class="service-card fade-in stagger-1">
                 <div class="service-icon">
-                    <i class="fas fa-globe"></i>
+                    <i class="fas fa-satellite-dish"></i>
                 </div>
-                <h3>Desarrollo Web</h3>
-                <p>Creamos tu presencia digital profesional con páginas web modernas, rápidas y optimizadas para
-                    conversión.</p>
+                <h3>Telecomunicaciones</h3>
+                <p>Contamos con experiencia en el campo de las telecomunicaciones de más de 15 años. Nuestra oferta de valor consta de servicios de última generación.</p>
                 <ul class="service-features">
-                    <li>Páginas web corporativas</li>
-                    <li>Landing pages de alto impacto</li>
-                    <li>Webs autoadministrables</li>
-                    <li>Optimización SEO</li>
-                    <li>Hosting y dominio incluido</li>
+                    <li>Conexiones en Fibra Óptica</li>
+                    <li>Conexiones en Radio Enlaces</li>
+                    <li>Redes de Comunicación</li>
+                    <li>VoIP - Video Conferencias</li>
+                    <li>Zonas WIFI 6 Inteligentes</li>
+                    <li>Ingeniería en Redes Eléctricas</li>
                 </ul>
             </div>
 
+            <!-- TIC -->
             <div class="service-card fade-in stagger-2">
                 <div class="service-icon">
-                    <i class="fas fa-cogs"></i>
+                    <i class="fas fa-server"></i>
                 </div>
-                <h3>Ingeniería en Sistemas</h3>
-                <p>Diseñamos y desarrollamos sistemas robustos que automatizan y optimizan los procesos de tu empresa.
-                </p>
+                <h3>Tecnología de la Información & Comunicación</h3>
+                <p>Con un Clic en tus manos, podrás disponer de cualquier tipo de solución tecnológica de última generación, desde algo muy simple hasta soluciones de escala mayor.</p>
                 <ul class="service-features">
-                    <li>Análisis y diseño de sistemas</li>
-                    <li>Automatización de procesos</li>
-                    <li>Integración de datos</li>
-                    <li>Arquitecturas escalables</li>
-                    <li>Soluciones a medida</li>
+                    <li>Data Centers (Hardware - Software)</li>
+                    <li>IoT (Internet de las Cosas)</li>
+                    <li>Virtualización y Clouding</li>
+                    <li>Seguridad Informática</li>
+                    <li>Cámaras IP (Analítica)</li>
+                    <li>Control de Accesos</li>
+                    <li>Climatización de Centros de Datos</li>
                 </ul>
             </div>
 
+            <!-- Obra Civil e Industrial -->
             <div class="service-card fade-in stagger-3">
                 <div class="service-icon">
-                    <i class="fas fa-box-open"></i>
+                    <i class="fas fa-industry"></i>
                 </div>
-                <h3>Sistemas & ERPs</h3>
-                <p>Implementamos sistemas empresariales completos que centralizan tu operación y mejoran la toma de
-                    decisiones.</p>
+                <h3>Obra Civil e Industrial Mecatrónica</h3>
+                <p>Nuestra ingeniería Industrial y Mecatrónica cuenta con tecnología de punta con equipamiento CNC Laser, Plasma, Router + área de Arquitectura y Construcción.</p>
                 <ul class="service-features">
-                    <li>Desarrollo de sistemas internos</li>
-                    <li>Implementación de ERPs</li>
-                    <li>Integraciones contables</li>
-                    <li>Dashboards y reporting</li>
-                    <li>Migraciones y optimización</li>
+                    <li>Innovación Industrial CNC</li>
+                    <li>Proyectos Industriales</li>
+                    <li>Estructuras Metálicas</li>
+                    <li>Mobiliarios y Oficinas Móviles</li>
+                    <li>Campamentos Equipados</li>
+                    <li>Torres de Comunicación</li>
+                    <li>Proyectos Especiales de Medición</li>
                 </ul>
             </div>
 
+            <!-- Transformación Digital y Marketing -->
             <div class="service-card fade-in stagger-4">
-                <div class="service-icon">
-                    <i class="fas fa-headset"></i>
-                </div>
-                <h3>Soporte Tecnológico</h3>
-                <p>Brindamos soporte técnico continuo para que tu tecnología funcione sin interrupciones.</p>
-                <ul class="service-features">
-                    <li>Soporte técnico 24/7</li>
-                    <li>Mantenimiento de sistemas</li>
-                    <li>Monitoreo y alertas</li>
-                    <li>Resolución de incidencias</li>
-                    <li>Acompañamiento continuo</li>
-                </ul>
-            </div>
-
-            <div class="service-card fade-in stagger-5">
                 <div class="service-icon">
                     <i class="fas fa-chart-line"></i>
                 </div>
-                <h3>Marketing Digital</h3>
-                <p>Potenciamos tu marca en el mundo digital con estrategias efectivas y contenido que convierte.</p>
+                <h3>Transformación Digital & Marketing 360°</h3>
+                <p>¿Su negocio va bien? No se confíe. Perder vigencia en su modelo de gestión en este tiempo es muy fácil. Necesita estrategias a corto, mediano y largo plazo.</p>
                 <ul class="service-features">
-                    <li>Diseño digital profesional</li>
-                    <li>Branding corporativo</li>
-                    <li>Estrategias digitales</li>
-                    <li>Automatización de marketing</li>
-                    <li>Presencia online integral</li>
+                    <li>Gestión de Marcas Digitales</li>
+                    <li>Estrategia Digital Integral</li>
+                    <li>Acciones Tácticas de Marketing</li>
+                    <li>Inteligencia Comercial</li>
+                    <li>Publicidad 360°</li>
+                    <li>SEO - SEM</li>
+                    <li>Activaciones de Marca y Eventos</li>
                 </ul>
             </div>
 
+            <!-- Desarrollo de Software -->
+            <div class="service-card fade-in stagger-5">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Desarrollo de Software</h3>
+                <p>La información o data en los negocios hoy es considerada oro en polvo. Este valioso insumo nos permite mejorar al contar con indicadores reales.</p>
+                <ul class="service-features">
+                    <li>Software Pymes E-commerce</li>
+                    <li>Software Corporativo</li>
+                    <li>Gestión Hospitalaria 360°</li>
+                    <li>Software para Competencias Deportivas</li>
+                    <li>Levantamiento de Procesos</li>
+                    <li>Transformación Digital</li>
+                    <li>Automatización de Procesos</li>
+                </ul>
+            </div>
+
+            <!-- Soporte y Consultoría -->
             <div class="service-card fade-in stagger-6">
                 <div class="service-icon">
-                    <i class="fas fa-project-diagram"></i>
+                    <i class="fas fa-headset"></i>
                 </div>
-                <h3>Proyectos Tecnológicos</h3>
-                <p>Gestionamos proyectos tecnológicos completos desde la consultoría hasta la implementación final.</p>
+                <h3>Soporte & Consultoría Técnica</h3>
+                <p>Nuestro Know How en diferentes ramas tecnológicas cuenta con más de 20 años de experiencia implementando soluciones a nivel nacional.</p>
                 <ul class="service-features">
-                    <li>Gestión de proyectos TI</li>
-                    <li>Implementaciones completas</li>
-                    <li>Consultoría tecnológica</li>
-                    <li>Mejora continua</li>
-                    <li>Escalamiento tecnológico</li>
+                    <li>Consultoría en TI & Negocios</li>
+                    <li>Soporte Técnico 24/7</li>
+                    <li>Equipamiento e Implementación</li>
+                    <li>Operaciones y Mantenimiento</li>
+                    <li>Capacitación y Entrenamiento</li>
+                    <li>Gestión de Proyectos</li>
+                    <li>Soluciones Llave en Mano</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Why TST Section -->
-    <section class="why-tst" id="nosotros">
+    <!-- Timeline Section -->
+    <section class="timeline-section" id="linea-tiempo">
         <div class="section-header">
-            <span class="section-label">¿POR QUÉ ELEGIRNOS?</span>
-            <h2>¿Por qué <span class="gradient-text">TST</span>?</h2>
-            <p>Un solo aliado tecnológico, todas las soluciones que necesitas</p>
+            <span class="section-label">NUESTRA TRAYECTORIA</span>
+            <h2>Línea de <span class="gradient-text">Tiempo</span></h2>
+            <p>12 años de crecimiento y evolución constante</p>
         </div>
 
-        <div class="features-grid">
-            <div class="feature-item fade-in stagger-1">
-                <div class="feature-icon">
-                    <i class="fas fa-check-double"></i>
+        <div class="timeline">
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <div class="timeline-year">2011</div>
+                    <h3>Inicio de Operaciones</h3>
+                    <p>Primeros Proyectos en tecnología y comunicaciones, sentando las bases para lo que sería una empresa líder en soluciones integrales.</p>
                 </div>
-                <h3>Soluciones Integrales</h3>
-                <p>No necesitas múltiples proveedores. En TST encuentras todo: desde tu página web hasta tu sistema ERP
-                    completo.</p>
             </div>
 
-            <div class="feature-item fade-in stagger-2">
-                <div class="feature-icon">
-                    <i class="fas fa-rocket"></i>
+            <div class="timeline-item fade-in stagger-1">
+                <div class="timeline-content">
+                    <div class="timeline-year">2016</div>
+                    <h3>Expansión en Redes y Comunicación</h3>
+                    <p>Consolidación en el campo de las telecomunicaciones con proyectos de gran envergadura en infraestructura de redes.</p>
                 </div>
-                <h3>Tecnología que Escala</h3>
-                <p>Desarrollamos soluciones pensadas para crecer contigo. Lo que construimos hoy, funcionará mañana.</p>
             </div>
 
-            <div class="feature-item fade-in stagger-3">
-                <div class="feature-icon">
-                    <i class="fas fa-shield-alt"></i>
+            <div class="timeline-item fade-in stagger-2">
+                <div class="timeline-content">
+                    <div class="timeline-year">2021</div>
+                    <h3>Proyectos Mineros y Petroleros</h3>
+                    <p>Implementación de soluciones 360° y proyectos llave en mano para el sector minero y petrolero, demostrando nuestra capacidad de escalabilidad.</p>
                 </div>
-                <h3>Confianza y Experiencia</h3>
-                <p>Más de 5 años transformando empresas con tecnología. Referencias verificables y casos de éxito
-                    reales.</p>
             </div>
 
-            <div class="feature-item fade-in stagger-4">
-                <div class="feature-icon">
-                    <i class="fas fa-handshake"></i>
+            <div class="timeline-item fade-in stagger-3">
+                <div class="timeline-content">
+                    <div class="timeline-year">2023</div>
+                    <h3>Innovación y Especialización</h3>
+                    <p>Incorporación de Marketing Digital, Desarrollo de Software a Medida y expansión en Industria Mecatrónica CNC, consolidando nuestra oferta integral.</p>
                 </div>
-                <h3>Acompañamiento Continuo</h3>
-                <p>No te dejamos solo después de la entrega. Soporte técnico, mantenimiento y mejoras constantes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos Section -->
+    <section id="proyectos">
+        <div class="section-header">
+            <span class="section-label">NUESTROS PROYECTOS</span>
+            <h2>Proyectos <span class="gradient-text">Destacados</span></h2>
+            <p>Soluciones tecnológicas implementadas con éxito</p>
+        </div>
+
+        <div class="proyectos-grid">
+            <div class="proyecto-card fade-in stagger-1">
+                <div class="proyecto-header">
+                    <h3>PROYECTOS EN OBRA CIVIL</h3>
+                </div>
+                <div class="proyecto-body">
+                    <p>En TST con un Click en tus manos, dispondrás de tecnología de última generación para proyectos de obra civil e industrial. Implementamos soluciones completas que incluyen diseño, construcción y equipamiento.</p>
+                    <div class="proyecto-tech">
+                        <span class="tech-tag">CNC Laser</span>
+                        <span class="tech-tag">Plasma</span>
+                        <span class="tech-tag">Router</span>
+                        <span class="tech-tag">Arquitectura</span>
+                        <span class="tech-tag">Construcción</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="feature-item fade-in stagger-5">
-                <div class="feature-icon">
-                    <i class="fas fa-chart-line"></i>
+            <div class="proyecto-card fade-in stagger-2">
+                <div class="proyecto-header">
+                    <h3>PROYECTOS TECNOLÓGICOS TIC</h3>
                 </div>
-                <h3>Enfoque en Resultados</h3>
-                <p>No solo entregamos código, entregamos soluciones que mejoran tu productividad y reducen costos.</p>
+                <div class="proyecto-body">
+                    <p>Soluciones de Tecnología de la Información y Comunicación de última generación. Desde Data Centers hasta IoT, ofrecemos implementaciones completas para hogares, emprendimientos y empresas.</p>
+                    <div class="proyecto-tech">
+                        <span class="tech-tag">Data Centers</span>
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">Cloud</span>
+                        <span class="tech-tag">Seguridad</span>
+                        <span class="tech-tag">Virtualización</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="feature-item fade-in stagger-6">
-                <div class="feature-icon">
-                    <i class="fas fa-lightbulb"></i>
+            <div class="proyecto-card fade-in stagger-3">
+                <div class="proyecto-header">
+                    <h3>PROYECTOS TELECOMUNICACIONES</h3>
                 </div>
-                <h3>Innovación Constante</h3>
-                <p>Utilizamos las últimas tecnologías y mejores prácticas para que tu empresa esté siempre a la
-                    vanguardia.</p>
+                <div class="proyecto-body">
+                    <p>Infraestructura de telecomunicaciones de alto desempeño. Más de 15 años de experiencia en implementación de redes de fibra óptica, radio enlaces y soluciones de conectividad empresarial.</p>
+                    <div class="proyecto-tech">
+                        <span class="tech-tag">Fibra Óptica</span>
+                        <span class="tech-tag">Radio Enlaces</span>
+                        <span class="tech-tag">WIFI 6</span>
+                        <span class="tech-tag">VoIP</span>
+                        <span class="tech-tag">Video Conferencia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clientes Section -->
+    <section id="clientes" class="clients-section">
+        <div class="section-header">
+            <span class="section-label">CLIENTES QUE CONFIARON EN NOSOTROS</span>
+            <h2>Nuestros <span class="gradient-text">Clientes</span></h2>
+            <p>Empresas líderes que han transformado su negocio con nuestras soluciones</p>
+        </div>
+
+        <div class="clients-grid">
+            <div class="client-logo fade-in">
+                <span>MIRACLE HAIR THERAPY</span>
+            </div>
+            <div class="client-logo fade-in stagger-1">
+                <span>COLORS OF THE EARTH</span>
+            </div>
+            <div class="client-logo fade-in stagger-2">
+                <span>CNC - Complejo Nacional de Competencias</span>
+            </div>
+            <div class="client-logo fade-in stagger-3">
+                <span>PROLIPA</span>
+            </div>
+            <div class="client-logo fade-in stagger-1">
+                <span>VAPO</span>
+            </div>
+            <div class="client-logo fade-in stagger-2">
+                <span>NORTH HOSPITAL</span>
+            </div>
+            <div class="client-logo fade-in stagger-3">
+                <span>GRAFI TEXT</span>
+            </div>
+            <div class="client-logo fade-in">
+                <span>POLICÍA NACIONAL DEL ECUADOR</span>
             </div>
         </div>
     </section>
@@ -1358,32 +1764,58 @@
     <!-- Contact Section -->
     <section id="contacto">
         <div class="section-header">
-            <span class="section-label">HABLEMOS</span>
+            <span class="section-label">CONTÁCTANOS</span>
             <h2>Estamos listos para <span class="gradient-text">ayudarte</span></h2>
-            <p>Elige tu canal de comunicación preferido</p>
+            <p>Requerimientos o inquietudes, favor escribirnos, inmediatamente nos pondremos en contacto con usted o su empresa.</p>
         </div>
 
-        <div class="contact-grid">
+        <div class="contact-form-container fade-in">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre *</label>
+                    <input type="text" id="nombre" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" class="form-control" required></textarea>
+                </div>
+                
+                <button type="submit" class="form-btn">
+                    <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                </button>
+            </form>
+        </div>
+
+        <div class="contact-grid" style="margin-top: 4rem;">
             <div class="contact-card fade-in stagger-1">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Oficina Principal</h3>
+                <p>Cumbaya Calle: García Moreno El.35 y Chimborazo</p>
+                <p class="contact-link">Quito - Ecuador</p>
+            </div>
+
+            <div class="contact-card fade-in stagger-2">
                 <div class="contact-icon">
                     <i class="fab fa-whatsapp"></i>
                 </div>
                 <h3>WhatsApp</h3>
                 <p>Respuesta inmediata</p>
-                <a href="https://wa.me/593988055517?text=Hola%20TST,%20quiero%20información%20sobre%20sus%20servicios"
+                <a href="https://wa.me/593997962747?text=Hola%20TST,%20quiero%20información%20sobre%20sus%20servicios"
                     target="_blank" class="contact-link">
-                    +593 98 805 5517
-                </a>
-            </div>
-
-            <div class="contact-card fade-in stagger-2">
-                <div class="contact-icon">
-                    <i class="fab fa-telegram-plane"></i>
-                </div>
-                <h3>Telegram</h3>
-                <p>Chat directo</p>
-                <a href="https://t.me/tu_usuario_telegram" target="_blank" class="contact-link">
-                    @TST_Ecuador
+                    +593 99 796 2747
                 </a>
             </div>
 
@@ -1393,8 +1825,25 @@
                 </div>
                 <h3>Email</h3>
                 <p>Consultas formales</p>
-                <a href="/cdn-cgi/l/email-protection#ec8f8382988d8f9883ac989f98c28f8381d39f998e86898f98d1af83829f9980988dc9dedc8889c9dedcbf899e9a858f85839f" class="contact-link">
-                    <span class="__cf_email__" data-cfemail="4a2925243e2b293e250a3e393e64292527">[email&#160;protected]</span>
+                <a href="mailto:negocios@tstsolutions.com.ec" class="contact-link">
+                    negocios@tstsolutions.com.ec
+                </a>
+            </div>
+        </div>
+
+        <!-- Trabaja con Nosotros -->
+        <div class="contact-form-container fade-in" style="margin-top: 4rem; background: rgba(14, 46, 42, 0.8);">
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--tst-green-light);">¿Quieres trabajar con nosotros?</h3>
+            </div>
+            <p style="text-align: center; color: rgba(255, 255, 255, 0.8); margin-bottom: 2rem;">
+                Para aplicar a nuestro equipo de trabajo envía tu CV y carta de recomendación a:
+            </p>
+            <div style="text-align: center;">
+                <a href="mailto:negocios@tstsolutions.com.ec?subject=Aplicación%20Laboral%20TST&body=Adjunto%20mi%20CV%20y%20carta%20de%20recomendación"
+                   class="btn btn-primary" style="display: inline-flex;">
+                    <i class="fas fa-paper-plane"></i>
+                    Enviar Aplicación
                 </a>
             </div>
         </div>
@@ -1404,26 +1853,27 @@
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
-                <h3>TST - Te Soluciono Todo</h3>
+                <h3>TST Solutions - Te Solucionamos Todo</h3>
                 <p>Soluciones Tecnológicas Integrales</p>
-                <p>Tecnología que funciona. Soluciones que escalan.</p>
+                <p>ALTA TECNOLOGÍA EN TUS MANOS</p>
             </div>
 
             <div class="social-links">
-                <a href="https://wa.me/593988055517" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://t.me/tu_usuario_telegram" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-                <a href="/cdn-cgi/l/email-protection#1c7f7372687d7f68735c686f68327f7371"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/company/tst" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/593997962747" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://t.me/tstsolutions" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                <a href="mailto:negocios@tstsolutions.com.ec"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/company/tst-solutions" target="_blank"><i class="fab fa-linkedin"></i></a>
             </div>
 
             <div class="copyright">
-                <p>© 2026 TST - Te Soluciono Todo · Todos los derechos reservados</p>
-                <p>Quito, Ecuador</p>
+                <p>© 2026 TST Solutions - Te Solucionamos Todo · Todos los derechos reservados</p>
+                <p>Quito, Ecuador | Tel: +593 99 796 2747 | Email: negocios@tstsolutions.com.ec</p>
+                <p>www.tstsolutions.com.ec</p>
             </div>
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileNav = document.getElementById('mobileNav');
@@ -1524,8 +1974,32 @@
             fadeObserver.observe(element);
         });
 
-        // Initialize
-        updateActiveNavLink();
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const nombre = document.getElementById('nombre').value;
+                const email = document.getElementById('email').value;
+                const asunto = document.getElementById('asunto').value;
+                const mensaje = document.getElementById('mensaje').value;
+                
+                // Create mailto link
+                const subject = asunto ? asunto : 'Consulta desde TST Website';
+                const body = `Nombre: ${nombre}%0AEmail: ${email}%0A%0AMensaje:%0A${mensaje}`;
+                
+                // Open email client
+                window.location.href = `mailto:negocios@tstsolutions.com.ec?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Show success message
+                alert('Gracias por contactarnos. Se abrirá tu cliente de correo para enviar el mensaje.');
+            });
+        }
 
         // Animate numbers
         const animateNumber = (element, target, duration = 2000) => {
@@ -1562,6 +2036,9 @@
         statNumbers.forEach(number => { 
             statsObserver.observe(number.parentElement);
         });
+
+        // Initialize
+        updateActiveNavLink();
     </script>
 </body>
 
