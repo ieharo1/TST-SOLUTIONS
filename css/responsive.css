@@ -1,5 +1,8 @@
-/* Responsive Styles */
 @media (max-width: 1200px) {
+    .hero-content {
+        gap: 4rem;
+    }
+    
     .section-header h2 {
         font-size: 2.5rem;
     }
@@ -20,6 +23,15 @@
         font-size: 3rem;
     }
 
+    .hero-title-row {
+        flex-direction: column;
+    }
+
+    .hero-logo img {
+        width: 110px;
+        margin-bottom: 10px;
+    }
+
     .nav-links {
         display: none;
     }
@@ -38,7 +50,7 @@
     }
 
     .hero-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .cta-buttons {
@@ -71,16 +83,16 @@
         font-size: 2.2rem;
     }
 
-    .cta-section h2 {
-        font-size: 2.2rem;
-    }
-
     .services-grid,
     .features-grid,
     .contact-grid,
     .proyectos-grid,
     .clients-grid {
         grid-template-columns: 1fr;
+    }
+
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .floating-contacts {
@@ -108,6 +120,24 @@
 
     .contact-form-container {
         padding: 2rem;
+    }
+
+    .client-logo {
+        height: 180px;
+        padding: 2rem;
+    }
+
+    .client-logo img {
+        max-width: 170px;
+        max-height: 90px;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-number {
+        font-size: 2rem;
     }
 }
 
@@ -145,5 +175,62 @@
     
     .footer-content {
         padding: 0 1rem;
+    }
+
+    .clients-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .client-logo {
+        height: 160px;
+        padding: 1.5rem;
+    }
+
+    .client-logo img {
+        max-width: 150px;
+        max-height: 80px;
+    }
+
+    .service-card,
+    .contact-card,
+    .feature-item {
+        padding: 2rem;
+    }
+
+    .timeline-content {
+        padding: 2rem;
+    }
+
+    .proyecto-header,
+    .proyecto-body {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        padding: 1rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .nav-cta {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .logo-container img {
+        height: 40px;
+    }
+
+    .brand-text h1 {
+        font-size: 1.5rem;
     }
 }
