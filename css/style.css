@@ -34,6 +34,27 @@ body {
 }
 
 /* ===== HEADER PROFESSIONAL (EXACTO COMO QUIERES) ===== */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    transition: transform 0.35s ease;
+    transform-origin: center;
+}
+
+/* ZOOM COMPLETO */
+.logo-container:hover {
+    transform: scale(1.15);
+}
+
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+
 header {
     position: fixed;
     top: 0;
