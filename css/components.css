@@ -1,0 +1,139 @@
+/* Botones */
+.btn {
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: var(--shadow-primary);
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--tst-green);
+    border: 2px solid var(--tst-green);
+}
+
+.btn-secondary:hover {
+    background: var(--tst-gray);
+    transform: translateY(-5px);
+}
+
+.btn-white {
+    background: white;
+    color: var(--tst-green);
+    padding: 1.3rem 3rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-white:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Secciones */
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-label {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: var(--tst-gray);
+    color: var(--tst-green);
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--tst-white);
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Tarjetas */
+.service-card,
+.feature-item,
+.contact-card,
+.client-logo {
+    background: rgba(14, 46, 42, 0.6);
+    border: 1px solid rgba(63, 174, 154, 0.2);
+    border-radius: 24px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.service-card:hover,
+.contact-card:hover,
+.client-logo:hover {
+    transform: translateY(-10px);
+    border-color: var(--tst-green-light);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Gradientes y Efectos */
+.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Animaciones de Fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+    animation-play-state: paused;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
