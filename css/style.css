@@ -33,6 +33,10 @@ body {
     overflow-x: hidden;
 }
 
+body.splash-active {
+    overflow: hidden;
+}
+
 /* ===== HEADER PROFESSIONAL (EXACTO COMO QUIERES) ===== */
 .logo-container {
     display: flex;

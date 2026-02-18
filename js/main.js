@@ -1,3 +1,47 @@
+// Splash Screen
+(function() {
+    const splashScreen = document.getElementById('splashScreen');
+    const splashText = document.getElementById('splashText');
+    const splashParticles = document.getElementById('splashParticles');
+    const hasSeenSplash = localStorage.getItem('tst_splash_seen');
+
+    if (!hasSeenSplash) {
+        document.body.classList.add('splash-active');
+        
+        // Create particles
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 3 + 's';
+            particle.style.animationDuration = (2 + Math.random() * 2) + 's';
+            splashParticles.appendChild(particle);
+        }
+
+        // Animate text letter by letter
+        const text = 'TST SOLUTIONS';
+        let delay = 0;
+        text.split('').forEach((letter, index) => {
+            const span = document.createElement('span');
+            span.textContent = letter;
+            span.style.animationDelay = (0.1 + delay) + 's';
+            if (letter === ' ') span.style.width = '15px';
+            splashText.appendChild(span);
+            delay += 0.08;
+        });
+
+        // Hide splash after animation
+        setTimeout(() => {
+            splashScreen.classList.add('hidden');
+            document.body.classList.remove('splash-active');
+            localStorage.setItem('tst_splash_seen', 'true');
+        }, 5000);
+    } else {
+        splashScreen.classList.add('hidden');
+    }
+})();
+
 // Mobile menu toggle
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileNav = document.getElementById('mobileNav');
