@@ -190,29 +190,6 @@ Sábados: 09h00 – 13h00
 
 Soporte 24/7 para emergencias
 
----
-
-### 📄 Licencia
-
-© 2026 TST Solutions – Te Solucionamos Todo
-Todos los derechos reservados.
-
-Uso permitido:
-
-Visualización y demostración
-
-Referencia técnica
-
-Aprendizaje
-
-Uso prohibido:
-
-Distribución comercial
-
-Modificación sin autorización
-
-Uso en proyectos competidores
-
 
 ---
 
@@ -233,6 +210,7 @@ TST-SOLUTIONS/
     └── images/
         └── tst-logo.jpg    # Recursos gráficos
 ```
+
 
 ---
 
