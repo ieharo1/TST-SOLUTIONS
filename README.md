@@ -236,19 +236,6 @@ TST-SOLUTIONS/
 
 ---
 
-## 📄 Licencia
+## Sistema desarrollado por TST SOLUTIONS
 
-MIT — contribuciones bienvenidas 🚀
-
----
-
-## 💻 Creado Por
-
-🧑‍💻 Isaac Haro
-
-Ingeniero en Sistemas · Full Stack · Automatización · Data
-
-Isaac Esteban Haro Torres
-- 📧 zackharo1@gmail.com
-- 📱 098805517
-- 💻 [GitHub](https://github.com/ieharo1)
+© 2026 Inventory System by TST SOLUTIONS - Todos los derechos reservados.
